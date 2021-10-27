@@ -91,6 +91,7 @@ export default {
     computed: {
         sanitized() {
             let filtered;
+            console.log("SELECETED" + this.selected)
             if (this.selected === null) {
                 return JSON.stringify([]);
             } else if (this.selected.map) {
@@ -121,7 +122,7 @@ export default {
         }
 
         this.selected = filterSelectedItems;
-        console.log(this.selected)
+        console.log(this.key)
         console.log("END MOUNTING");
     },
     methods: {
